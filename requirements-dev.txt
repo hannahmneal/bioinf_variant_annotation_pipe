@@ -1,0 +1,7 @@
+# Ensure you `brew install bcftools` pior to installing these requirements
+
+# htslib>=1.10  # required by cyvcf2 > 0.20.0
+cyvcf2==0.33.0  # Brent S Pedersen, Aaron R Quinlan, cyvcf2: fast, flexible variant analysis with Python, Bioinformatics, Volume 33, Issue 12, June 2017, Pages 1867–1869, https://doi.org/10.1093/bioinformatics/btx057
+pandas
+matplotlib
+
