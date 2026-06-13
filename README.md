@@ -17,14 +17,32 @@ A bioinformatics project.
 
 ---
 
-# INFO
+# RUNNING
 
-Example `./main.py` output:
+To run, execute `./main.py` from *your own* virtual environment (i.e., ensure the shebang at the top of `main.py` references your VM's python).
+
+Example `./main.py` output for a hypothetical individual:
 
 ```py
 % ./main.py                                            
 
 Script starting...
+
+Script starting...
+
+
+Finding pathogenic clinical signatures ['Pathogenic', 'Likely_pathogenic'] for patient... 
+
+
+Building the lookup of pathogenic alleles (please be patient!)...
+
+
+341,395 pathogenic variants identified...
+
+
+Gathering pathogenic variants...
+
+Found 0 pathogenic variants for hypothetical patient
 
 1 66926 AG ['A'] OR4F5:79501 Uncertain_significance
 1 69134 A ['G'] OR4F5:79501 Likely_benign
@@ -34,13 +52,15 @@ Script starting...
 1 69404 T ['C'] OR4F5:79501 Uncertain_significance
 ```
 
-This shows the 
-- chromosome (CHROM, 1)
-- position (POS, 66926)
+This shows: 
+- the chromosome (CHROM, 1)
+- the position of the gene (POS, 66926)
 - the reference allele (REF, AG)
 - the variant allele (list of ALT, ['A'])
 - the gene name (INFO.get("GENEINFO"), OR4F5:79501) where the part before ':' is the gene name and the part after the ':' is its NCBI gene ID
 - ClinVar's clinical verdict (INFO.get("CLINSIG"), 'Uncertain_significance')
+
+A `.csv` should also be generated at the root of the project with the results of the analysis.
 
 ---
 
